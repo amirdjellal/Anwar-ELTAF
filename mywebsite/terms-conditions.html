@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشروط والأحكام - الشركة المتطورة للمواد الكهربائية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background-color: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .terms-container {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .terms-header {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+            padding: 25px;
+            position: relative;
+        }
+        
+        .terms-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+        
+        .terms-content {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 65vh;
+            line-height: 1.8;
+        }
+        
+        .terms-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .terms-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .terms-content::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+        
+        .terms-content::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+        
+        .section-title {
+            color: #059669;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .warning-box {
+            background-color: #fef2f2;
+            border-right: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        
+        .accept-btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 30px auto 0;
+        }
+        
+        .accept-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: right;
+        }
+        
+        th {
+            background-color: #f9fafb;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 20px;
+                max-height: 60vh;
+            }
+            
+            .terms-header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terms-container">
+        <div class="terms-header">
+            <button class="terms-close" onclick="closeTerms()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">الشروط والأحكام</h1>
+            <p class="opacity-90">الشركة المتطورة للمواد الكهربائية</p>
+            <p class="text-sm opacity-80 mt-2">تاريخ آخر تحديث: ١ يناير ٢٠٢٤</p>
+        </div>
+        
+        <div class="terms-content">
+            <div class="warning-box">
+                <p class="font-bold text-lg mb-2">تنويه هام</p>
+                <p>يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام موقعنا أو التعامل معنا. استخدامك للموقع أو خدماتنا يعني موافقتك على هذه الشروط.</p>
+            </div>
+            
+            <h2 class="section-title text-xl font-bold">١. التعاريف</h2>
+            <p>في هذه الوثيقة:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>"الشركة": تشير إلى الشركة المتطورة للمواد الكهربائية</li>
+                <li>"الموقع": يشير إلى الموقع الإلكتروني للشركة</li>
+                <li>"العميل": أي شخص أو جهة تتعامل مع الشركة</li>
+                <li>"المنتجات": المواد الكهربائية والخدمات المقدمة</li>
+                <li>"الاتفاقية": هذه الوثيقة من الشروط والأحكام</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٢. القبول</h2>
+            <p>باستخدام موقعنا أو التعامل معنا، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء منها، فيرجى عدم استخدام موقعنا أو خدماتنا.</p>
+            
+            <h2 class="section-title text-xl font-bold">٣. طلبات الشراء والتسعير</h2>
+            <p>تخضع جميع الطلبات للشروط التالية:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>الأسعار قابلة للتغيير دون إشعار مسبق</li>
+                <li>الأسعار لا تشمل ضريبة القيمة المضافة ما لم يذكر خلاف ذلك</li>
+                <li>يجب تأكيد الطلبات كتابياً</li>
+                <li>الشركة تحتفظ بالحق في رفض أي طلب دون إبداء الأسباب</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٤. الدفع والشروط المالية</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع الدفع</th>
+                            <th>الشروط</th>
+                            <th>الملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>الدفع النقدي</td>
+                            <td>قبل التسليم</td>
+                            <td>خصم 2% على المبالغ النقدية</td>
+                        </tr>
+                        <tr>
+                            <td>الدفع الآجل</td>
+                            <td>30 يوم من تاريخ الفاتورة</td>
+                            <td>يشترط موافقة الإدارة</td>
+                        </tr>
+                        <tr>
+                            <td>الدفع بالشيكات</td>
+                            <td>قيد القبول</td>
+                            <td>يشترط أن تكون الشيكات باسم الشركة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2 class="section-title text-xl font-bold">٥. التسليم والنقل</h2>
+            <p>تطبق الشروط التالية على عمليات التسليم:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>يتم تحديد مواعيد التسليم حسب توفر المنتجات</li>
+                <li>يتم تسليم الطلبية في العنوان المحدد من قبل العميل</li>
+                <li>يتحمل العميل مسؤولية توفير الوصول الآمن للموقع</li>
+                <li>تتحمل الشركة مسؤولية المنتجات حتى لحظة التسليم</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٦. الضمان والعيوب</h2>
+            <p>تقدم الشركة ضماناً للمنتجات وفق الشروط التالية:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>ضمان المصنع الأصلي على جميع المنتجات</li>
+                <li>فترة الضمان تختلف حسب نوع المنتج</li>
+                <li>يجب الاحتفاظ بفاتورة الشراء لإثبات الضمان</li>
+                <li>لا يشمل الضمان الأعطال الناتجة عن سوء الاستخدام</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٧. الإرجاع والاستبدال</h2>
+            <p>يقبل الإرجاع أو الاستبدال في الحالات التالية:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>وجود عيب في التصنيع</li>
+                <li>المنتج لا يتطابق مع الوصف المتفق عليه</li>
+                <li>يجب إرجاع المنتج في غضون 7 أيام من الاستلام</li>
+                <li>يجب أن يكون المنتج في حالته الأصلية مع العبوة</li>
+                <li>تتحمل الشركة تكاليف الشحن في حالة وجود عيوب</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٨. المسؤولية والحد منها</h2>
+            <p>تتحمل الشركة المسؤولية ضمن الحدود التالية:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>تقتصر مسؤولية الشركة على قيمة المنتجات المشتراة</li>
+                <li>لا تتحمل الشركة مسؤولية الأضرار غير المباشرة</li>
+                <li>تتوقف مسؤولية الشركة عند تسليم المنتجات للعميل</li>
+                <li>يجب على العميل فحص المنتجات فور استلامها</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">٩. القوة القاهرة</h2>
+            <p>لا تتحمل الشركة المسؤولية عن التأخير أو عدم التنفيذ الناتج عن أسباب خارجة عن إرادتها، بما في ذلك على سبيل المثال لا الحصر:</p>
+            <ul class="list-disc pr-5 mt-2 space-y-2">
+                <li>الكوارث الطبيعية</li>
+                <li>الحروب والاضطرابات المدنية</li>
+                <li>الإضرابات العمالية</li>
+                <li>قرارات الحكومة أو السلطات</li>
+                <li>أعطال في الشبكات أو وسائل الاتصال</li>
+            </ul>
+            
+            <h2 class="section-title text-xl font-bold">١٠. الملكية الفكرية</h2>
+            <p>جميع المحتويات الموجودة على الموقع، بما في ذلك النصوص والصور والشعارات والتصاميم، هي ملك للشركة ويحميها قانون حقوق النشر والملكية الفكرية. يحظر نسخ أو توزيع أو تعديل أي من هذه المحتويات دون إذن كتابي من الشركة.</p>
+            
+            <h2 class="section-title text-xl font-bold">١١. الخصوصية</h2>
+            <p>نلتزم بحماية خصوصية عملائنا. راجع سياسة الخصوصية الخاصة بنا للحصول على معلومات مفصلة حول كيفية جمع واستخدام وحماية معلوماتك.</p>
+            
+            <h2 class="section-title text-xl font-bold">١٢. التعديلات</h2>
+            <p>تحتفظ الشركة بالحق في تعديل هذه الشروط والأحكام في أي وقت. سيتم نشر النسخة المعدلة على الموقع، ويعتبر استمرار استخدامك للموقع أو خدماتنا بمثابة موافقتك على التعديلات.</p>
+            
+            <h2 class="section-title text-xl font-bold">١٣. القانون الحاكم والتسوية</h2>
+            <p>تخضع هذه الاتفاقية لقوانين المملكة العربية السعودية. أي نزاع ينشأ عن هذه الاتفاقية يتم تسويته ودياً، وإذا تعذر ذلك، يتم اللجوء إلى المحاكم المختصة في الرياض.</p>
+            
+            <div class="info-box">
+                <h3 class="font-bold text-lg mb-3">للاستفسارات</h3>
+                <p>إذا كانت لديك أي أسئلة حول هذه الشروط والأحكام، يرجى التواصل معنا:</p>
+                <div class="mt-3 space-y-2">
+                    <p><i class="fas fa-envelope ml-2 text-green-600"></i> legal@electro-company.com</p>
+                    <p><i class="fas fa-phone ml-2 text-green-600"></i> ٠١١ ٨٨٨ ٧٧٧٧ (تحويلة ٣)</p>
+                    <p><i class="fas fa-clock ml-2 text-green-600"></i> من الأحد إلى الخميس، ٨ صباحاً - ٤ عصراً</p>
+                </div>
+            </div>
+            
+            <button class="accept-btn" onclick="acceptTerms()">
+                <i class="fas fa-file-signature"></i>
+                أوافق على الشروط والأحكام
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // إغلاق الشروط والأحكام والعودة للصفحة الرئيسية
+        function closeTerms() {
+            // يمكن تعديل هذا الرابط ليناسب موقعك
+            window.location.href = 'index.html';
+        }
+        
+        // قبول الشروط والأحكام
+        function acceptTerms() {
+            // حفظ قبول المستخدم في localStorage
+            localStorage.setItem('termsAccepted', 'true');
+            
+            // إظهار رسالة تأكيد
+            alert('شكراً لموافقتك على الشروط والأحكام. يمكنك الآن الاستفادة من جميع خدماتنا.');
+            
+            // العودة للصفحة الرئيسية
+            window.location.href = 'index.html';
+        }
+        
+        // إغلاق بالنقر خارج الصندوق
+        document.addEventListener('click', function(event) {
+            const container = document.querySelector('.terms-container');
+            if (!container.contains(event.target) && event.target !== container) {
+                closeTerms();
+            }
+        });
+        
+        // إغلاق بالضغط على زر ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeTerms();
+            }
+        });
+        
+        // التحقق إذا كان المستخدم قد قرأ الشروط من قبل
+        window.addEventListener('load', function() {
+            const hasAccepted = localStorage.getItem('termsAccepted');
+            if (hasAccepted === 'true') {
+                // يمكن إضافة رسالة ترحيب أو سلوك مختلف
+                console.log('المستخدم وافق مسبقاً على الشروط');
+            }
+        });
+    </script>
+</body>
+</html>
