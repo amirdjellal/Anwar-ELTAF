@@ -11,14 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
-            }, 500);
+            }, 200); // Reduced from 500ms
         });
         
-        // Fallback for slow loaders
+        // Fallback for slow loaders (e.g. if a minor image is stuck)
         setTimeout(() => {
             preloader.style.opacity = '0';
             preloader.style.visibility = 'hidden';
-        }, 5000);
+        }, 3000); // Reduced from 5000ms
+
     }
 
     // 2. Page Transition Logic
