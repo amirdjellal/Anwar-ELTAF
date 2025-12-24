@@ -119,38 +119,50 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 7. Active Link / Scroll Spy
+    // 7. Active Link / Scroll Spy (Optimized for Performance)
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
+    let sectionOffsets = [];
+
+    function cacheSectionOffsets() {
+        sectionOffsets = Array.from(sections).map(section => ({
+            id: section.getAttribute('id'),
+            top: section.offsetTop,
+            height: section.offsetHeight
+        }));
+    }
 
     function updateActiveLink() {
+        if (sectionOffsets.length === 0) cacheSectionOffsets();
+        
         let currentSectionId = '';
-        const scrollPosition = window.scrollY + 100; // Offset for header
+        const scrollPosition = window.scrollY + 120; // Slightly larger offset for better accuracy
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSectionId = section.getAttribute('id');
+        sectionOffsets.forEach(section => {
+            if (scrollPosition >= section.top && scrollPosition < section.top + section.height) {
+                currentSectionId = section.id;
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('nav-link-active');
-            // Remove hardcoded Tailwind focus classes if they exist
-            link.classList.remove('text-blue-700', 'border-b-2', 'border-blue-700', 'pb-1');
-            link.classList.add('text-gray-600'); // Default color
-
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('nav-link-active');
+            const href = link.getAttribute('href').substring(1);
+            link.classList.toggle('nav-link-active', href === currentSectionId);
+            
+            // Clean up custom Tailwind classes if necessary
+            if (href === currentSectionId) {
                 link.classList.remove('text-gray-600');
+            } else {
+                link.classList.add('text-gray-600');
             }
         });
     }
 
+    // Refresh cache on resize
+    window.addEventListener('resize', cacheSectionOffsets);
     window.addEventListener('scroll', updateActiveLink);
     
-    // Initial call to set active link on load
+    // Initial setup
+    cacheSectionOffsets();
     updateActiveLink();
 
     // Smooth scroll and immediate focus on click
@@ -161,5 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 
 
