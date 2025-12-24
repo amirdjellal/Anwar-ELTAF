@@ -1,0 +1,16 @@
+{
+  "name": "شركة انوار الطيف للمواد الكهربائية",
+  "short_name": "انوار الطيف",
+  "description": "لاستيراد وتوريد المواد الكهربائية",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "images/img3.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ]
+}

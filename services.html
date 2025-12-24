@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خدماتنا - شركة انوار الطيف للمواد الكهربائية</title>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader-content">
+        <div class="loader-circle"></div>
+        <h2 class="text-xl font-bold text-blue-800">شركة انوار الطيف</h2>
+      </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- الشعار -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-2 rounded-lg ml-3 shadow-md"
+            >
+              <i class="fas fa-bolt text-xl"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-blue-800" id="company-name">
+                شركة انوار الطيف
+              </h1>
+              <p class="text-xs text-gray-500" id="company-subtitle">
+                لاستيراد المواد الكهربائية
+              </p>
+            </div>
+          </div>
+
+          <!-- روابط التنقل -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-home"
+              >الرئيسية</a
+            >
+            <a
+              href="gallery.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-gallery"
+              >معرض الصور</a
+            >
+            <a
+              href="services.html"
+              class="text-blue-700 font-semibold hover:text-blue-800 transition duration-300 border-b-2 border-blue-600 pb-1"
+              id="nav-services"
+              >خدماتنا</a
+            >
+            <a
+              href="location.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-location"
+              >الموقع الجغرافي</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-contact"
+              >تواصل معنا</a
+            >
+          </div>
+
+          <!-- تبديل اللغة -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="lang-switch"
+              class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium hover:bg-blue-200 transition duration-300"
+            >
+              <span id="lang-text">EN</span>
+            </button>
+
+            <!-- زر القائمة المنسدلة للهواتف -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- القائمة المنسدلة للهواتف -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 border-t">
+          <div class="flex flex-col space-y-3">
+            <a
+              href="index.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >الرئيسية</a
+            >
+            <a
+              href="gallery.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >معرض الصور</a
+            >
+            <a
+              href="services.html"
+              class="text-blue-700 font-semibold hover:text-blue-800 transition duration-300 py-2 px-4 rounded bg-blue-50"
+              >خدماتنا</a
+            >
+            <a
+              href="location.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >الموقع الجغرافي</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >تواصل معنا</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- خدماتنا -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12 reveal reveal-up">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-blue-800 mb-4"
+            id="services-title"
+          >
+            خدماتنا
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto" id="services-description">
+            نقدم مجموعة واسعة من الخدمات في مجال المواد الكهربائية لتلبية
+            احتياجات جميع القطاعات
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- خدمة 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-truck-loading text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service1-title"
+            >
+              توريد المواد الكهربائية
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service1-description">
+              نوفر جميع أنواع المواد الكهربائية من كابلات، مفاتيح، مقابس، لوحات
+              توزيع، وأنظمة إضاءة بجودة عالية.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service1-feature1">جميع المقاسات والأنواع</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service1-feature2">شهادات ضمان الجودة</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service1-feature3">أسعار تنافسية</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدمة 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-tools text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service2-title"
+            >
+              تركيب وصيانة الأنظمة الكهربائية
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service2-description">
+              فريق فني متخصص في تركيب وصيانة الأنظمة الكهربائية للمنازل والمصانع
+              والمرافق التجارية.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service2-feature1">فنيون مؤهلون ومرخصون</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service2-feature2">خدمة صيانة دورية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service2-feature3">تدقيق أنظمة السلامة</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدمة 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-lightbulb text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service3-title"
+            >
+              حلول الإضاءة المتطورة
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service3-description">
+              تصميم وتركيب أنظمة إضاءة مبتكرة وموفرة للطاقة باستخدام أحدث تقنيات
+              LED والإضاءة الذكية.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service3-feature1">تصميم إضاءة مخصص</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service3-feature2">أنظمة إضاءة ذكية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service3-feature3">توفير طاقة يصل إلى 80%</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدمة 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-solar-panel text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service4-title"
+            >
+              أنظمة الطاقة الشمسية
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service4-description">
+              تصميم وتركيب أنظمة الطاقة الشمسية للمنازل والمصانع لتوليد الكهرباء
+              النظيفة والمتجددة.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service4-feature1">أنظمة متكاملة</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service4-feature2">دراسات جدوى اقتصادية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service4-feature3">صيانة وتشغيل</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدمة 5 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-home text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service5-title"
+            >
+              أتمتة المنازل الذكية
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service5-description">
+              تحويل منزلك إلى منزل ذكي يمكن التحكم في إضاءته وأجهزته عن بعد عبر
+              الهاتف الذكي.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service5-feature1">أنظمة تحكم مركزية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service5-feature2">تكامل مع الأجهزة الذكية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service5-feature3">توفير في استهلاك الطاقة</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدمة 6 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-clipboard-check text-2xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-center mb-4 text-gray-800"
+              id="service6-title"
+            >
+              استشارات هندسية
+            </h3>
+            <p class="text-gray-600 text-center mb-6" id="service6-description">
+              تقديم استشارات هندسية متخصصة في مجال الكهرباء والطاقة للمشاريع
+              الجديدة والتجديدات.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service6-feature1">دراسات الجدوى الفنية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service6-feature2">تصميم الأنظمة الكهربائية</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 ml-2"></i>
+                <span id="service6-feature3">إشراف على التنفيذ</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- قسم إضافي للخدمات -->
+        <div
+          class="mt-12 bg-gradient-to-l from-blue-50 to-white rounded-2xl p-8 md:p-12 shadow-lg reveal reveal-up"
+        >
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 mb-8 md:mb-0 md:ml-8">
+              <h3
+                class="text-2xl font-bold text-blue-800 mb-4"
+                id="consultation-title"
+              >
+                استشارات هندسية كهربائية
+              </h3>
+              <p class="text-gray-700 mb-6" id="consultation-description">
+                نقدم استشارات هندسية متخصصة في مجال الكهرباء والطاقة، بما في ذلك
+                تصميم الأنظمة الكهربائية للمشاريع الجديدة وتطوير الأنظمة القائمة
+                لتحسين كفاءتها وتقليل استهلاك الطاقة.
+              </p>
+              <a
+                href="contact.html"
+                class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300 inline-flex items-center"
+              >
+                <span id="consultation-btn">اطلب استشارة مجانية</span>
+                <i class="fas fa-arrow-left mr-2"></i>
+              </a>
+            </div>
+            <div class="md:w-1/3">
+              <div class="bg-blue-600 text-white rounded-xl p-6 text-center">
+                <i class="fas fa-headset text-5xl mb-4"></i>
+                <h4 class="text-xl font-bold mb-2" id="support-title">
+                  دعم فني متواصل
+                </h4>
+                <p id="support-description">
+                  نوفر دعم فني على مدار الساعة لحل أي مشكلة كهربائية طارئة.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-blue-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center space-x-2">
+              <div class="bg-white text-blue-600 p-2 rounded-lg ml-2 shadow">
+                <i class="fas fa-bolt text-xl"></i>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold" id="footer-company-name">
+                  شركة انوار الطيف
+                </h2>
+                <p class="text-blue-200 text-sm" id="footer-company-subtitle">
+                  للمواد الكهربائية
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 max-w-md text-blue-200" id="footer-description">
+              شركة رائدة في توريد وتركيب المواد الكهربائية بجميع أنواعها. نحن
+              نلتزم بتقديم منتجات عالية الجودة وخدمات متميزة لعملائنا.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 md:space-x-reverse"
+          >
+            <div>
+              <h4 class="font-bold text-lg mb-4" id="footer-links1-title">
+                روابط سريعة
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >الرئيسية</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="gallery.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >معرض الصور</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >خدماتنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-4" id="footer-links2-title">
+                روابط إضافية
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="location.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >الموقع الجغرافي</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >تواصل معنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-blue-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-blue-200 text-center md:text-right" id="copyright">
+            جميع الحقوق محفوظة &copy; 2025 شركة انوار الطيف للمواد الكهربائية
+          </p>
+          <div class="mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-blue-200 hover:text-white mx-2 transition duration-300"
+              id="privacy-policy"
+              >سياسة الخصوصية</a
+            >
+            <a
+              href="#"
+              class="text-blue-200 hover:text-white mx-2 transition duration-300"
+              id="terms"
+              >الشروط والأحكام</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 left-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 hidden floating-button"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+
+    <!-- زر واتساب العائم -->
+    <a
+      href="https://wa.me/218912092602"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 floating-button z-50 flex items-center justify-center w-16 h-16"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+  </body>
+</html>

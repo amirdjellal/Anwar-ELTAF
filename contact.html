@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تواصل معنا - الشركة المتطورة للمواد الكهربائية</title>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader-content">
+        <div class="loader-circle"></div>
+        <h2 class="text-xl font-bold text-blue-800">شركة انوار الطيف</h2>
+      </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- الشعار -->
+          <div class="flex items-center space-x-2">
+            <div class="bg-blue-600 text-white p-2 rounded-lg">
+              <i class="fas fa-bolt text-xl"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-blue-800" id="company-name">
+                الشركة المتطورة
+              </h1>
+              <p class="text-xs text-gray-500" id="company-subtitle">
+                للمواد الكهربائية
+              </p>
+            </div>
+          </div>
+
+          <!-- روابط التنقل -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-home"
+              >الرئيسية</a
+            >
+            <a
+              href="gallery.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-gallery"
+              >معرض الصور</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-services"
+              >خدماتنا</a
+            >
+            <a
+              href="location.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300"
+              id="nav-location"
+              >الموقع الجغرافي</a
+            >
+            <a
+              href="contact.html"
+              class="text-blue-700 font-semibold hover:text-blue-800 transition duration-300 border-b-2 border-blue-600 pb-1"
+              id="nav-contact"
+              >تواصل معنا</a
+            >
+          </div>
+
+          <!-- تبديل اللغة -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="lang-switch"
+              class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium hover:bg-blue-200 transition duration-300"
+            >
+              <span id="lang-text">EN</span>
+            </button>
+
+            <!-- زر القائمة المنسدلة للهواتف -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- القائمة المنسدلة للهواتف -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 border-t">
+          <div class="flex flex-col space-y-3">
+            <a
+              href="index.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >الرئيسية</a
+            >
+            <a
+              href="gallery.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >معرض الصور</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >خدماتنا</a
+            >
+            <a
+              href="location.html"
+              class="text-gray-600 font-semibold hover:text-blue-700 transition duration-300 py-2 px-4 rounded hover:bg-blue-50"
+              >الموقع الجغرافي</a
+            >
+            <a
+              href="contact.html"
+              class="text-blue-700 font-semibold hover:text-blue-800 transition duration-300 py-2 px-4 rounded bg-blue-50"
+              >تواصل معنا</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- تواصل معنا -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-blue-800 mb-4"
+            id="contact-title"
+          >
+            تواصل معنا
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto" id="contact-description">
+            نحن هنا لمساعدتك في جميع استفساراتك المتعلقة بالمواد الكهربائية. لا
+            تتردد في التواصل معنا
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- معلومات الاتصال -->
+          <div class="lg:w-2/5">
+            <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+              <h3
+                class="text-2xl font-bold text-blue-800 mb-6"
+                id="contact-info-title"
+              >
+                معلومات التواصل
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-lg ml-3">
+                    <i class="fas fa-phone-alt text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800" id="phone-title">
+                      الهاتف
+                    </h4>
+                    <p class="text-gray-600 mt-1">011 123 4567</p>
+                    <p class="text-gray-600">050 123 4567</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-lg ml-3">
+                    <i class="fas fa-envelope text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800" id="email-title">
+                      البريد الإلكتروني
+                    </h4>
+                    <p class="text-gray-600 mt-1">info@electro-company.com</p>
+                    <p class="text-gray-600">sales@electro-company.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-lg ml-3">
+                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800" id="address-title">
+                      العنوان
+                    </h4>
+                    <p class="text-gray-600 mt-1" id="address-text">
+                      الرياض، حي العليا، شارع الملك فهد، بجوار مركز العليا
+                      التجاري
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-lg ml-3">
+                    <i class="fas fa-clock text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-bold text-gray-800"
+                      id="working-hours-title"
+                    >
+                      أوقات العمل
+                    </h4>
+                    <p class="text-gray-600 mt-1" id="weekdays-hours">
+                      السبت - الخميس: 8 صباحاً - 10 مساءً
+                    </p>
+                    <p class="text-gray-600" id="friday-hours">
+                      الجمعة: 4 مساءً - 10 مساءً
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-8 border-t border-gray-200">
+                <h4
+                  class="font-bold text-gray-800 mb-4"
+                  id="social-media-title"
+                >
+                  تابعنا على وسائل التواصل
+                </h4>
+                <div class="flex space-x-4 space-x-reverse">
+                  <a
+                    href="#"
+                    class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-800 text-white p-3 rounded-full hover:bg-blue-900 transition duration-300"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- نموذج الاتصال -->
+          <div class="lg:w-3/5">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <h3
+                class="text-2xl font-bold text-blue-800 mb-6"
+                id="send-message-title"
+              >
+                أرسل رسالة
+              </h3>
+              <p class="text-gray-600 mb-8" id="send-message-description">
+                يرجى تعبئة النموذج التالي وسنقوم بالرد عليك في أقرب وقت ممكن
+              </p>
+
+              <form class="contact-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-medium mb-2"
+                      id="name-label"
+                      >الاسم الكامل *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="phone"
+                      class="block text-gray-700 font-medium mb-2"
+                      id="phone-label"
+                      >رقم الهاتف *</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    id="email-label"
+                    >البريد الإلكتروني *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="subject"
+                    class="block text-gray-700 font-medium mb-2"
+                    id="subject-label"
+                    >الموضوع *</label
+                  >
+                  <select
+                    id="subject"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                    required
+                  >
+                    <option value="" selected disabled id="select-subject">
+                      اختر الموضوع
+                    </option>
+                    <option value="inquiry" id="option-inquiry">
+                      استفسار عن منتج
+                    </option>
+                    <option value="quotation" id="option-quotation">
+                      طلب تسعير
+                    </option>
+                    <option value="service" id="option-service">
+                      طلب خدمة
+                    </option>
+                    <option value="support" id="option-support">دعم فني</option>
+                    <option value="other" id="option-other">موضوع آخر</option>
+                  </select>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    id="message-label"
+                    >الرسالة *</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
+                >
+                  <i class="fas fa-paper-plane ml-2"></i>
+                  <span id="send-button">إرسال الرسالة</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-blue-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center space-x-2">
+              <div class="bg-white text-blue-600 p-2 rounded-lg">
+                <i class="fas fa-bolt text-xl"></i>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold" id="footer-company-name">
+                  الشركة المتطورة
+                </h2>
+                <p class="text-blue-200 text-sm" id="footer-company-subtitle">
+                  للمواد الكهربائية
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 max-w-md text-blue-200" id="footer-description">
+              شركة رائدة في توريد وتركيب المواد الكهربائية بجميع أنواعها. نحن
+              نلتزم بتقديم منتجات عالية الجودة وخدمات متميزة لعملائنا.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 md:space-x-reverse"
+          >
+            <div>
+              <h4 class="font-bold text-lg mb-4" id="footer-links1-title">
+                روابط سريعة
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >الرئيسية</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="gallery.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >معرض الصور</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >خدماتنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-4" id="footer-links2-title">
+                روابط إضافية
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="location.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >الموقع الجغرافي</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-blue-200 hover:text-white transition duration-300"
+                    >تواصل معنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-blue-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-blue-200 text-center md:text-right" id="copyright">
+            جميع الحقوق محفوظة &copy; 2023 الشركة المتطورة للمواد الكهربائية
+          </p>
+          <div class="mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-blue-200 hover:text-white mx-2 transition duration-300"
+              id="privacy-policy"
+              >سياسة الخصوصية</a
+            >
+            <a
+              href="#"
+              class="text-blue-200 hover:text-white mx-2 transition duration-300"
+              id="terms"
+              >الشروط والأحكام</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 left-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 hidden floating-button"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- زر واتساب العائم -->
+    <a
+      href="https://wa.me/218912092602"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 floating-button z-50 flex items-center justify-center w-16 h-16"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Page specific contact form logic
+      const contactForm = document.querySelector(".contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const phone = document.getElementById("phone").value;
+          const email = document.getElementById("email").value;
+          const subjectSelect = document.getElementById("subject");
+          const subject =
+            subjectSelect.options[subjectSelect.selectedIndex].text;
+          const message = document.getElementById("message").value;
+          const body = `الاسم: ${name}%0D%0Aرقم الهاتف: ${phone}%0D%0Aالبريد: ${email}%0D%0A%0D%0Aالرسالة:%0D%0A${message}`;
+          window.location.href = `mailto:info@aace.ly?subject=${encodeURIComponent(
+            subject
+          )}&body=${encodeURIComponent(body)}`;
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
